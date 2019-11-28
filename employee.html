@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+            <script>
+                
+                function submit1(){
+                    emp={}     //object declaration
+                   
+                    var id=document.getElementById('id').value
+                    var name=document.getElementById('name').value
+                    var salary=document.getElementById('salary').value
+
+                    emp.empid=id
+                    emp.name=name
+                    emp.salary=salary
+
+                    alert("ID="+emp.empid+"\n"+"Name="+emp.name+"\n"+"Salary="+emp.salary)
+                    
+                }
+                
+            </script>
+
+
+        
+        <form action="" class="form-group" onsubmit="submit1()" method="POST">
+
+            <label for="">EmpId</label>
+            <input type="text" id="id">
+            <br>
+
+            <label for="">Name</label>
+            <input type="text" id="name">
+            <br>
+
+            <label for="">Salary</label>
+            <input type="text" id="salary">
+            <br><br><br>
+
+            <input type="submit" value="save">
+        </form>
+    </body>
+</html>

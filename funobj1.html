@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+                
+                
+                <!-- for character set defition     -->
+                <meta charset="utf-16">
+                <!-- for device based display definition     -->
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- to access bootstrap     -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+                 <style>
+                
+                 </style>
+        </head>
+
+      <body>
+    
+            <script src="JS/funobj2.js">
+                
+            </script>
+    
+        
+        
+             <button onclick= "objects()"> objects </button>
+        
+
+             <br>
+
+             <form action="" class ="form-group" onsubmit = "return save()" method="post">
+  
+    
+                    <label for="">Employee id</label><input type="text" id ="empid" required
+                                    class = "form-control">
+                    <label for="" >Name</label><input type="text" id = "empname" required class = "form-control">
+                    <label for="" >Salary</label><input type="text" id ="salary" required class = "form-control">
+                     <br>
+                     <input type="submit" value="save" class = "btn btn-success">
+                      <br>
+                     
+                  </form>
+                  
+                  <form action="" class ="form-group" onsubmit = "return save1()" method="post">
+  
+    
+                        <label for="">Product id</label><input type="text" id ="prodid" required
+                                        class = "form-control">
+                        <label for="" >Name</label><input type="text" id = "prodname" required class = "form-control">
+                        <label for="" >Price</label><input type="text" id ="price" required class = "form-control">
+                         <br>
+                         <input type="submit" value="save" class = "btn btn-success">
+                          <br>
+                         
+                          <div id="list"> </div>
+
+                          <div id="div1"></div>
+
+
+                      </form>
+                   
+        
+
+     </body> 
+
+</html>

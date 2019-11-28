@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <div id="table"></div>
+    
+        <script>
+        var rows=prompt("Enter the no of rows")
+        var column=prompt("Enter the no of columns")
+        var table="<table border=1px>"
+        var j=1
+        for(i=1;i<=rows;i++){
+        table+="<tr>"
+        while(j<=column){
+        table+="<td>"+i*j+"</td>"
+        j+=1
+        }
+        table+="</tr>"
+        j=1
+        }
+        table+="</table>"
+        document.getElementById('table').innerHTML=table
+
+        </script>
+    </body>
+</html>

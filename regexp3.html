@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            
+            function search(){
+
+                var textcontent= document.getElementById('content').value
+                var word= document.getElementById('input').value
+                var exp= new RegExp(word,'g','i')     // i used for making case sensitive
+               //alert(textcontent.match(exp))
+               var len= textcontent.match(exp)
+               alert("length is :"+ len.length)
+
+
+                newcontent = textcontent.replace(exp,"<span style='color:red'>"+word+"</span>")
+                document.getElementById('para1').innerHTML=newcontent
+
+            }
+            function zip(){
+                var zip1= document.getElementById('zipc').value
+                var expression= /^\d{5}[-]\d{4}$/g
+                var result5= expression.test(zip1)
+                if (result5){
+                    alert("valid")
+                }
+                else{
+                    alert("not valid")
+                }
+            }
+
+            function showdate(){
+
+                var date= new Date()
+                alert(date)
+                document.getElementById('date').value=date      //innerHtml also can use
+                var d= date.getDate()
+                console.log(d)
+            }
+
+
+
+        </script>
+        <textarea name="" id="content" cols="30" rows="10"></textarea>
+        <input type="text" id="input">
+        <button onclick="search()">Click</button>
+        <p id="para1"></p>
+
+        <input type="text" id="zipc">
+        <button onclick="zip()">Click</button>
+
+        <div>
+        <input type="text" id="date">
+        <button onclick="showdate()">Click</button>
+        </div>
+    </body>
+</html>

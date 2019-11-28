@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            function AddItem(){
+                var item = document.getElementById('myinput').value;
+	            var ul = document.getElementById("list");
+	            var li = document.createElement('li');
+                li.appendChild(document.createTextNode("- "+item));
+                ul.appendChild(li);
+                document.getElementById('myinput').value="";
+                li.onclick = removeItem;
+               
+            }
+            function removeItem(e) {
+                e.target.parentElement.removeChild(e.target);
+            }
+
+            function movetask(e){
+                
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="row">
+             <div class="col-sm-6 demostyleclass" id="todolist">TO DO LIST
+                    <input type="text" id="myinput" >
+                    <button onclick="AddItem()">Add</button>
+                    <ul id="list"></ul>
+                </div>
+             <div class="col-sm-6 demostyleclass" id="todolist">TOMORROW LIST
+                    <button onclick= "movetask()"> Move Task </button>
+             </div>
+            
+        </div>
+        
+    </body>
+</html>

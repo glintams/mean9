@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body>
+        <script>
+            var x=[10,20,30,"boolean"]
+            // console.log(typeof x)
+            // console.log(x)
+            // console.log(x.length)
+            // console.log(x[1])
+
+            //it takes the element
+            for(value of x){
+                console.log(value)
+            }
+            for(index in x) {
+                console.log(x[index])
+            }  
+            
+
+            var names=["Glinta","Jasmine","Tija","Gena","Anna"]
+            console.log(names)
+            console.log(names.pop())            // it returns what is popped
+            console.log(names.splice(2,1))      // 2 is starting and 1 is the count for splice
+            console.log(names.push("Twinkle"))
+            console.log(names)  // it returns the index of push location
+            // console.log(indexOf("Glinta"))
+            newarray= names.concat(["Elsa","Emmanuvel"])
+            console.log(newarray)
+            names.fill(" ",1,2)
+            console.log(names)
+
+
+            var s="java is object oriented"
+            var words= s.split(" ")
+            for(wordz of words){
+                console.log(wordz)
+            }
+
+            
+
+
+            //map function 
+            var x=[10,20,30,40]
+            newarray= x.map((i)=>{
+                 return i+2
+            })
+            console.log(newarray)
+
+
+            newarray2= names.filter((i)=>{
+                if(i.startsWith("G"))
+                {
+                    return i
+                }
+            })
+            console.log(newarray2)
+
+
+
+            result=names.every((k)=>{
+                if(k.startsWith("A")){
+                    return true
+                }
+            })
+            console.log(result)
+        </script>
+    </body>
+</html>

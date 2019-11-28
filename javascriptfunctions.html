@@ -1,0 +1,88 @@
+<html>
+       <!-- <script src="js/script.js"></script> -->
+       <script src="JS/code.js"></script>
+        <head>
+            
+            
+
+                 
+
+                 <style>
+                        /* style class */
+
+                 </style>
+                 <script>
+                     //string functions
+                     var stmt = "java script is interpreted  ";
+                     var obj = new String(stmt);
+                     console.log(obj);
+                     console.log(stmt.charAt(25)) ;
+                     var sum = add1(10,40);
+                     console.log(sum);
+                     function add1(a,b)
+                     { 
+                       var s; 
+                       
+                       s = a + b;
+                       console.log(stmt);
+                       return s;
+                       
+                     }
+                     console.log(add1);
+                 </script>
+        </head>
+
+      <body>
+           <button onclick= "buttonfunction()"> Click </button>
+           <button onclick= "add(10,20,30)"> Add </button>
+           <div>
+             <label for=""> User Name</label>
+             <input type="text" name="userName" id ="userName">
+           </div>
+           <button onclick= "printUserName()">Click</button>
+           <p id="p1" > Expertz  LAB</p>
+           <button onclick= "changeColor()">Change Color</button>
+           <br>
+           <div id="showimage">  
+               
+                <img src="img/img1.jpg"  alt="img1" id="img1" 
+                 onclick= "showImage()">
+                 <img src="img/img2.jpg" style ="display:none" alt="img2" id="img2" 
+                 onclick= "showImage()">
+                 
+           </div>
+           <label for="" >State</label>
+           <select name ="state" id = "state" onChange= "showAlertState()">
+                <option value ="" ></option>
+                <option value ="TEST" selected>TEST</option> 
+               <option value ="KERALA">KERALA</option>
+               <option value ="KARNATAKA">KARNATAKA</option>
+               <option value ="TAMILNADU">TAMILNADU</option>
+               <label for="" >Selected Value</label><input type="text" id="text1">
+               
+           </select>
+          <br>  <!-- for line break -->
+        <br>
+        <br>
+        <form action="forms.html" class ="form-group" method="GET" onsubmit= "return validateform()">
+                <label for="">Name:    </label><input type="text" id="name" class = "form-control">
+                <br><br>
+                <label for="" >Passwd:</label><input type="password" id="password" class = "form-control">
+                <br><br>
+                <label for="" >Age:   </label><input type="number" id="age" class = "form-control">
+                <br><br>
+                <label for="" >Mobile:</label><input type="number" id="mobile" class = "form-control">
+                <br><br>
+                <input type="submit" value="submit" class = "btn"   >
+        </form>              
+        
+                <label for="" >Number1:   </label><input type="number" id="num1" class = "form-control">
+                <br><br>
+                <label for="" >Number2:</label><input type="number" id="num2" class = "form-control">
+                <br><br>
+                <button onclick= "sum1()"> + </button>
+                <label for="" >Sum = </label><input type="text" id="text2">
+        
+            
+    </body> 
+</html>

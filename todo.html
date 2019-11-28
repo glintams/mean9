@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>To Do</title>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    </head>
+    <body>
+        
+        <input type="text" id="txt">
+        <button onclick="dynamic()">Add</button>
+        <div id="mylist">
+
+        </div>
+        <script>
+            var todo=[];
+            function dynamic(){
+                //console.log("hello")
+                var textvalue= document.getElementById("txt").value
+                //console.log(textvalue)
+                var parag= document.createElement("p")
+                var btn= document.createElement("button")
+                btn.innerHTML="Remove"
+                parag.innerHTML= textvalue
+                parag.setAttribute("id","p1")    //to set identical attribute id
+                var div= document.getElementById("demo")
+                div.appendChild(parag)
+                div.appendChild(btn)
+                todo.push(textvalue)
+                console.log(todo)
+                
+
+            }
+            function test(){
+                console.log("Test")
+            }
+        </script>
+        
+    </body>
+    
+</html>

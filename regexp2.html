@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="text1">
+        <button onclick="check()">Click</button>
+        <script>
+            function check(){
+                console.log("uhjbb")
+                var name= document.getElementById('text1').value
+                var reg1=/java/g
+               // var result1= reg1.test(name)
+                //alert(name)
+
+                var reg2= /^\w{4}/g     //{number} for length specification
+                var reg3= /^\w{4,}/g     // minimum lengtth is 4 and maximum is any
+                var reg3= /^\w{4,7}/g    // minimum lengtth is 4 and maximum is 7
+                var reg4= /^\d{10}$/g
+                var reg5= /^[9][8][7]\d{7}$/g  //or (987)
+                var reg6= /^\w+[@][a-zA-Z]{5}[.][a-zA-Z]{2,3}$/g
+                var result5= reg5.test(name)
+                if (result5){
+                    alert("valid")
+                }
+                else{
+                    alert("not valid")
+                }
+            }
+        </script>
+    </body>
+</html>

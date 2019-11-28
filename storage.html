@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+         <input type="text" id="data">
+         <button onclick="save()">store</button>
+         <script>
+
+    function save(){
+        //localStorage.clear()    ;   
+                  
+                   
+                    console.log("called")
+                    var value= document.getElementById('data').value
+                    // localStorage.setItem("1",value)
+                    // console.log(localStorage.getItem("1"))
+   
+                   var length= localStorage.length
+                   if(length>0){
+                       var key=length+1
+                       localStorage.setItem(key.toString(),value)
+                   }
+                   else{
+                       localStorage.setItem("1",value)
+                   }
+                   for(i=1; i<=localStorage.length;i++){
+                       console.log(localStorage.getItem(i.toString()))
+                   }
+                   console.log(localStorage.length)
+                   
+              }
+            </script>
+
+ 
+
+
+    </body>
+</html>

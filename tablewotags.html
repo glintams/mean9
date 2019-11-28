@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Table creation without tags</title>
+        <style>
+            .table{
+                display: table;
+                width: 100%;
+                
+            }
+            .heading{
+                display: table-row;
+                height: auto;
+                font-weight: bold;
+
+            }
+            .row{
+                display: table-row;
+            }
+            .cell{
+                display: table-cell;
+                border: solid;
+                border-width: thin;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="table">
+            <div class="heading">
+                <div class="cell">
+                    First
+                </div>
+                <div class="cell">
+                    Second
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">1-1</div>
+                <div class="cell">1-2</div>
+            </div>
+            <div class="row">
+                <div class="cell">2-1</div>
+                <div class="cell">2-2</div>
+            </div>
+        </div>
+    </body>
+</html>

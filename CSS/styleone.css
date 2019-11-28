@@ -1,0 +1,22 @@
+/*table{
+    border-collapse: collapse
+}
+.heading{
+background-color: darkred
+}
+.content{
+background-color: blue
+}
+td:hover{
+background-color: aqua
+}*/
+.demo{
+    background-color: blueviolet;
+    width: 100%;
+    height: 150px;  
+}
+h1{
+    text-align: center;
+    margin: 0px;
+    padding: 50px
+}
