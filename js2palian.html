@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paliandrome test</title>
+<style>
+    #clock{
+        width: 300px;
+        background: black;
+        padding: 20px;
+        margin: 20px;
+        color: lime;
+        display: block;
+        font: 20px monospace;
+    }
+</style>
+
+    <script>
+            function check(){
+                word= document.getElementById('input').value
+                div= document.getElementById('div')
+                var len = word.length
+
+                for(var i=0; i<len/2; i++){
+                    if(word[i] !== word[len-1-i]){
+
+                        div.innerHTML= "Not a paliandrome"
+                        return false
+                    }
+                }
+                
+                div.innerHTML= "is a paliandrome"
+
+                myvar= setTimeout(clearing,2000)   //timeout for paliandromes only
+                // alert(myvar)
+            }
+
+
+            function clearing(){
+                div2= document.getElementById('div')
+                div2.innerHTML= ''
+            }
+
+
+            function showTime(){
+                var d= new Date()
+                document.getElementById("clock").innerHTML= d.toLocaleTimeString()
+            }
+
+            var intervalID= setInterval(showTime,1000)
+ 
+    </script>
+</head>
+<body>
+    
+    <label for="">Input :</label><br>
+    <input type="text" id="input" ><br>
+    <br>
+    <button onclick="check()">Check it</button>
+    <button onclick="clearing()">Clear it</button>
+    <div id="div"></div>
+
+    <p> The current time is :<div id="clock"></div></p>
+
+</body>
+</html>

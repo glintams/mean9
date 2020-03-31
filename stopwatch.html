@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stopwatch</title>
+
+    <script>
+
+    var h1 = document.getElementsByTagName('h1')[0],
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0;
+    var t;
+
+        function add(){
+            
+            seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
+        
+    </script>
+</head>
+<body>
+    
+    
+    <h1><time>00:00:00</time></h1>
+    <button onclick="add()" id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="clear">clear</button>
+    <p> The current time is :<div id="clock"></div></p>
+</body>
+</html>

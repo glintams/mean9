@@ -22,9 +22,16 @@ function loadTime(){
         vehiclelist.push(vehicle)
         console.log(vehiclelist)
         }
+
+       
     else{
         alert("slot is full")
         }
+
+        localStorage.setItem("vehiclearray",JSON.stringify(vehiclelist))
+        var str= localStorage.getItem("vehiclearray")
+        var arr= JSON.parse(str)
+        console.log("Array local storage:",arr)
     }
 
 

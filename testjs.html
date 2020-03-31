@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Testing of Node</title>
+
+    </head>
+    <body>
+        <script>
+            console.log("Hi")
+            console.log(Math.PI)
+            console.log(Math.floor(14.5643))
+            console.log(Math.round(14.5643))
+            console.log(Math.random())
+            console.log(Math.log10(1))
+            function sample(){
+                for(var i=0; i<5;i++){
+                    console.log("loop",i)
+                }
+                console.log("function",i)
+            }
+            sample()
+            function test(){
+                for(let i=0; i<5;i++){                //let have only block scope
+                    console.log("loop",i)
+                }
+                console.log("function",i)
+            }
+            test()
+        </script>
+        
+    </body>
+</html>

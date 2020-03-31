@@ -2,17 +2,32 @@
 <html>
 <head>
     <title>Welcome page</title>
+    <div id="demo">
+
+    </div>
+    <script>
+         
+        //  var resultstr= "<p>This page \u00A9"                    //\u is used for unicode symbols                    
+        // document.getElementById("demo").innerHTML=resultstr
+
+        function Redirect(){
+            window.location="https://www.google.com"
+        }
+
+        document.write("You will be redirected to")
+        setTimeout('Redirect()',10000)
+
+
+    </script>
 </head>
 <body>
     <h2>Expertz Lab</h2>
-    <p>MEAN Stack development course</p>
+    
     <a href="first.html">Click</a>
     <button>Button 1</button>
-    <div>
-        <button>Button 2</button>
-    </div>
+    
     <img src="/home/expertzlab13/Desktop/Project/Images/3D.jpg" alt="No img found" >
     <!-- width="150px" height="150px"> -->
-
+    
 </body>
 </html>

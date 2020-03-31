@@ -1,0 +1,162 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 15px 50px 15px 70px;
+      background: rgb(196, 206, 245);
+      font-size: 18px;
+    }
+
+        #demo {
+      background-color: rgb(182, 183, 206);
+      padding: 30px 40px;
+      color: rgb(19, 18, 20);
+      text-align: center;
+    }
+    #test {
+      margin: 0;
+      border: none;
+      width: 75%;
+      padding: 12px;
+      float: left;
+      font-size: 16px;
+    }
+    #add {
+      padding: 10px;
+      width: 25%;
+      background: #d9d9d9;
+      font-size: 16px;
+    }
+        </style>
+        
+        
+        <script>
+        var todolist = []
+var tomarrowlist=[]
+
+function addtodo()
+{
+    
+    var input = document.getElementById("txt1").value;
+
+    if (input == '')
+    {
+        alert("Enter  data!");  
+    }else
+    {
+    todolist.push(input)
+    document.getElementById("txt1").value=""
+    reload()
+    }
+
+}
+function reload()
+{
+    var tlist=document.createElement("div")
+    tlist.setAttribute("id","list")
+    
+    for(i in todolist)
+    {
+        tlist.innerHTML=todolist[i]+"<button onclick='remove("+i+")'>Move</button>"+"<br>"
+        console.log(i)
+        
+    }
+    document.getElementById("mylist").appendChild(tlist)
+
+}
+function remove(index)
+{
+  console.log("todo",todolist)
+
+  var tm= todolist.splice(index,1)
+  console.log("todo",todolist)
+ 
+  tomarrowlist.push(tm)
+  console.log("tomarrow",tomarrowlist)
+    var rlist=document.createElement("div2")
+  rlist.setAttribute("id","list")
+
+  var dlist=document.createElement("div4")
+  dlist.setAttribute("id","list")
+ 
+
+  document.getElementById("content").innerHTML=""
+  for(i in tomarrowlist)
+    {
+        document.getElementById("content").innerHTML+="<p>" + tomarrowlist[i] + "</p>"
+        rlist.innerHTML="<button onclick='back("+i+")'>back</button>"+"<br>"
+        dlist.innerHTML="<button onclick='del("+i+")'>delete</button>"+"<br>"
+        console.log(i)
+        
+    }
+    document.getElementById("rvlist").appendChild(rlist)
+    document.getElementById("delist").appendChild(dlist)
+  var node=document.getElementById("mylist")
+ node.removeChild(node.lastChild)
+
+}
+function back(index)
+{
+    
+    var blist=document.createElement("div3")
+    blist.setAttribute("id","list")
+    for(i in tomarrowlist)
+    {
+        blist.innerHTML="<p>" +tomarrowlist[index]+ "</p>"
+        console.log(i)
+        
+    }
+    document.getElementById("mylist2").appendChild(blist)
+    var b=tomarrowlist.splice(index,1)
+    todolist.push(b)
+   // tomarrowlist.pop(index,1)
+    //todolist.push(index,1)
+    console.log("tomarr",tomarrowlist)
+    console.log("todo",todolist)
+    
+}
+function del(index)
+{
+tomarrowlist.pop(index,1)
+    console.log("tomarr",tomarrowlist)
+    console.log("todo",todolist)
+
+ 
+
+
+}
+     </script>
+    </head>
+    <body>
+        <div class="row">
+            <div id="demo" class="col-sm-6">
+              <h1> To Do List</h1>
+              <input type="text" id="txt1">
+            
+              <button id="add" onclick="addtodo()">add</button>
+              <div id="mylist"></div>
+              <div id="mylist2"></div>
+         
+
+            
+            </div id="test" class="col-sm-6">
+            <ul id="list2" class="ul2"></ul>
+           
+            <h3>Tomorrow List </h3>
+           <ul id="content" class="ul"></ul>
+            <div id="rvlist"></div>
+            <div id="delist"></div>
+        
+        
+          </div>
+          </div>
+        
+    </body>
+</html>

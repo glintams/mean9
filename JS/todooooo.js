@@ -40,8 +40,10 @@ function remove(m){
 //     tomodiv.innerHTML= tomo
 //   document.getElementById("mylist2").appendChild(tomodiv)
     var part=document.getElementById("second")
-    mylist2.innerHTML= tomo
-    part.appendChild(mylist2)
+    document.getElementById("mylist2").innerHTML= tomo
+    part.appendChild("mylist2")
+    removeitem()
+   
     
 
 }
@@ -49,5 +51,5 @@ function remove(m){
 function removeitem(){
     divi1= document.getElementById("mylist")
     divi2= document.getElementById("mylist2")
-    divi2.parentNode.removeChild(divi1)
+    divi2.removeChild(divi1)
 }

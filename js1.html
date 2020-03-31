@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Example 1</title>
+
+    <script>
+            function display(){
+                var data1= document.getElementById("name").value
+                var data2= document.getElementById("address").value
+    
+                // var rows= 1
+                // var column=1
+                // var table="<table border=1px>"
+                // var j=1
+                // for(i=1;i<=rows;i++){
+                // table+="<tr>"
+                // while(j<=column){
+                // table+="<td>"+data1+"</td>"
+                // table+="<td>"+data2+"</td>"
+                // j+=1
+                
+                // }
+                // table+="</tr>"
+                // j=1
+                // }
+                // table+="</table>"
+                // document.getElementById('table').innerHTML=table
+
+
+                divs= document.getElementById('table')
+                str = '<table border="2"> <tr> <td>Name</td><td>'
+                str += data1
+                str += '</td></tr>'
+                str += '<tr> <td>Address</td><td>'
+                str += data2
+                str += '</td> </tr></table>'
+                divs.innerHTML= str
+                
+    
+            }
+
+            function remove(){
+                divs1= document.getElementById('table')
+                divs1.innerHTML=" "
+            }
+
+
+            function multiply(){
+                first= document.getElementById('first').value
+                second= document.getElementById('second').value
+                divs1= document.getElementById('table2')
+
+                var result
+                var strr = '<table border= "2">'
+
+                for(var i=1; i<=second ; i++){
+                    
+                    result= first*i
+                    
+                    strr += '<tr> <td>'
+                    strr += first
+                    strr += '</td> <td> x </td> <td>'
+                    strr += i
+                    strr += '</td> <td> = </td> <td>'
+                    strr += result
+                    strr += '</td> </tr>'
+
+                }
+
+                strr += '</table>'
+                divs1.innerHTML = strr
+
+            }
+    
+        </script>
+</head>
+
+<body>
+    
+    
+
+     <table border="1px"; width="100%"; height= "50px">
+            <tr>
+                <th>Name</th>
+                <td><input type="text" id="name"></td>
+                
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" id="address"></td>
+            </tr>
+            <tr>
+                <td><button onclick="display()">Add</button></td>
+                <td><button onclick="remove()">Clear</button></td>
+            
+            </tr>
+            
+            
+            
+            
+            
+            
+            <tr>
+                <th>Enter first number</th>
+                <td><input type="text" id="first"></td>
+             </tr>
+             <tr>
+                <th>Enter second number</th>
+                <td><input type="text" id="second"></td>
+             </tr>
+            <tr>
+                <td><button onclick="multiply()">Multiply</button></td>
+            </tr>
+        </table>
+
+        <div id="table"></div>
+        <div id="table2"></div>
+    
+    
+        
+    
+</body>
+</html>
